@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+    <link rel="stylesheet" href="estilos.css">
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"  content="width=device-width, initial-scale=1.0">
+    <title>Manual de CSS</title>
+    
+</head>
+<body>
+
+    <header>
+        <title>CSS3</title>
+    </header>
+
+<br>
+
+    <section>
+      <article>
+        <h2>Primeros pasos en css3</h2>
+        <p>
+            CSS (Cascading Style Sheets) es un lenguaje de estilo ampliamente utilizado en el desarrollo web. Se encarga de definir y controlar la apariencia visual de un sitio web, permitiendo personalizar colores, tipografías, diseños, márgenes y otros aspectos visuales de los elementos HTML.<br>
+            Una de las principales ventajas de CSS es su capacidad para separar la estructura del contenido HTML de su presentación visual. Esto significa que podemos mantener el contenido y la estructura de nuestro sitio web en un archivo HTML y, al mismo tiempo, aplicar estilos personalizados a través de reglas CSS en un archivo separado. <br>
+            CSS es una herramienta poderosa que nos permite dar vida a nuestros sitios web, personalizando su apariencia y mejorando la experiencia de los usuarios.
+        </p>
+        <a target="_blank" href="https://www.youtube.com/watch?v=Y-OhzQpsRwI&t=4s&ab_channel=deivchoi">Click aquí para ver el video de youtube de referencia que se usó para relalizar este manual</a>
+      </article> 
+      <article>
+        <h2>Crear un archivo .css</h2>
+        <p>
+            Es necesario crear un archivo separado para los estilos en CSS para mantener una estructura y organización adecuadas en nuestro proyecto. Al separar los estilos en un archivo aparte, podemos evitar la mezcla de código HTML y CSS en un solo archivo, lo que facilita la legibilidad y el mantenimiento del código. <br> Al crear un archivo específico para los estilos en CSS, podemos definir reglas de estilo utilizando selectores y propiedades CSS. Estas reglas determinarán cómo se verán y se comportarán los elementos HTML en nuestro sitio web. <img src="img/Crear.png"> Una vez que hayamos creado nuestro archivo de estilos CSS, debemos vincularlo con nuestro archivo HTML principal, el archivo index.html. Para hacer esto, utilizamos la etiqueta < link> en la sección < head> del archivo HTML. La etiqueta < link> especifica la ubicación del archivo CSS y establece la conexión entre el archivo HTML y los estilos CSS definidos en el archivo separado, es importante asegurarse de que la ruta especificada en el enlace sea correcta y que el archivo de estilos esté ubicado en la misma carpeta o en la ruta adecuada.
+        </p>
+      </article>
+
+      <article>
+        <h2>La etiqueta link</h2>
+        <p>
+            La etiqueta <link> se utiliza en el encabezado (head) de un archivo HTML para enlazar un archivo externo, como un archivo CSS o una fuente de texto, con la página web. Aquí tienes un ejemplo básico de cómo utilizar la etiqueta link: <img src="img/link.png
+            "> 
+        </p>
+        <h3>< link rel="stylesheet" href="estilos.css"></h3>
+        <li><span class="destacado">< link>:</span> Esta es la etiqueta de apertura de la etiqueta link.</li>
+        <li><span class="destacado">rel="stylesheet":</span> El atributo rel especifica la relación entre el archivo enlazado y la página web. En este caso, establecemos rel como "stylesheet" para indicar que estamos enlazando un archivo CSS.</li>
+        <li><span class="destacado">href="estilos.css":</span> El atributo href define la ruta o URL del archivo CSS que queremos enlazar. En este ejemplo, "styles.css" es el nombre del archivo CSS que se encuentra en el mismo directorio que el archivo HTML. Si el archivo CSS estuviera en una carpeta diferente, deberías especificar la ruta relativa o absoluta para llegar a él.</li>
+        <p>
+            Es importante asegurarse de que la ruta especificada en el atributo href sea correcta y que el archivo CSS esté ubicado en la ubicación adecuada. Esto permitirá que el navegador cargue y aplique los estilos del archivo CSS correctamente en la página web.
+        </p>
+      </article>
+
+      <article>
+        <h2>Seleccion de elementos</h2>
+        <p>            
+            La selección de elementos en CSS se refiere al proceso de identificar y elegir los elementos HTML a los que deseas aplicar estilos específicos. En CSS, puedes seleccionar elementos utilizando diferentes tipos de selectores.
+        </p>
+        <h4>Selector de etiquetas:</h4>
+        <p>
+            Selecciona todos los elementos que coinciden con una etiqueta específica. Por ejemplo, si se desea aplicar un estilo a todos los párrafos en tu página, se puede usar el selector de etiquetas p. 
+        </p>
+        <img src="img/setiquetas.png" alt="">
+        <h3>color: yellowgreen;<br>font-size: 20px;</h3>
+        <li>
+            <span class="destacado">color: </span> Esta propiedad define el color del texto dentro de un elemento. Se puede especificar el color utilizando nombres de color predefinidos (como "yellowgreen") o valores de color en formato hexadecimal (#RRGGBB) o RGB (rgb(R, G, B)).
+        </li>
+        <li>
+            <span class="destacado">font-size: </span>Esta propiedad establece el tamaño de la fuente utilizada para el texto dentro de un elemento. Se puede especificar el tamaño utilizando unidades de medida como píxeles (px), puntos (pt), em, rem u otras unidades de medida relativas o absolutas.
+        </li>
+        
+        <h4>Selector de clase</h4>
+        <p>
+            Selecciona elementos que tienen una clase específica asignada. Puedes aplicar la misma clase a varios elementos y luego seleccionarlos en conjunto. Para seleccionar elementos por clase, utiliza un punto seguido del nombre de la clase. Por ejemplo:
+        </p>
+            <img src="img/etiquetas2.png" alt="">
+        <h3>.destacado{ <br>
+            color: darkmagenta; <br>
+            font-weight: bold;<br>
+         },</h3>
+         <li><span class="destacado">color: darkmagenta; </span>Esta propiedad establece el color del texto en "darkmagenta", que es un tono oscuro de magenta. Todos los elementos con la clase "destacado" tendrán su texto en este color.</li>
+
+         <li><span class="destacado"> font-weight: bold; </span>Esta propiedad establece el peso de la fuente en "bold" (negrita). Todos los elementos con la clase "destacado" tendrán su texto en negrita.</li>
+         <p>la regla .destacado se encarga de aplicar estilos visuales a todos los elementos con la clase "destacado". Estos estilos incluyen el color del texto en "darkmagenta" y la fuente en negrita.</p> 
+         <img src="img/destacado.png" alt="">
+
+      </article>
+      
+      
+    </section>
+
+<br>
+
+<footer></footer>
+
+</body>
+</html>
